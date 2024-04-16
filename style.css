@@ -1,0 +1,582 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior:smooth;
+    font-family:'REM';
+    
+}
+
+body {
+    color: white;
+    /* background:#081b29; */
+    background: url('img/background.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: url('img/background.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+/* Add this CSS for the hamburger menu icon and responsive navbar */
+.menu-toggle {
+    display: none; /* Hide the menu toggle icon by default */
+    cursor: pointer;
+    font-size: 28px;
+    color: white;
+    margin-right: 10px;
+}
+
+/* Style the icon for better visibility */
+.menu-toggle i {
+    cursor: pointer;
+}
+
+
+
+.header:hover {
+    background: rgb(95, 170, 180);
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 1;
+}
+
+.navbar a:hover {
+    color: rgb(16, 51, 51);
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+
+.home-content {
+    max-width: 600px;
+    animation: slideFromLeft 1s ease forwards; /* Apply the animation */
+}
+
+.home-content h3 {
+    font-size: 2.3rem;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+}
+
+
+.home-content p span {
+    color:white;
+    font-size: 1rem;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    color: #0ef;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content p {
+    font-size: 20px;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    transition: .5s;
+    opacity: 0;
+    margin: 30px 15px 30px 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-sci a:hover {
+    background: #0ef;
+    color: black;
+    box-shadow: 0 0 20px #0ef;
+}
+
+.btn-box {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: black;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 1;
+    box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
+}
+
+.btn-box:hover {
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
+}
+
+.about {
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5rem; */
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 4rem;
+}
+
+.about-img img {
+    width:40vw;
+    
+}
+
+.about-text h2 {
+    text-align: left;
+   line-height: 1.2; /* Adjust font size for heading */
+}
+
+.heading{
+    font-size: 3.75rem;
+    text-align: center;
+    padding-bottom: 7%;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+}
+.about-text h2 span {
+    color: #0ef;
+}
+
+.about-text h4 {
+    font-size: 1.6rem; /* Adjust font size for subheading */
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.7;
+    margin: 1.5rem 0 3rem; /* Adjust margin for subheading */
+}
+
+.about-text p {
+    color: aliceblue;
+    font-size: 1.4rem; /* Adjust font size for paragraph */
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+
+
+#services {
+    color: aliceblue;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+    text-align: center; /* Center the text */
+}
+
+.sub-title {
+    text-align: center;
+    font-size: 3.75rem;
+    padding-bottom: 70px; 
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s; 
+}
+
+.sub-title span {
+    color: #0ef;
+}
+
+.container {
+    padding: 90px;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(259px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    justify-content: center; /* Center the grid items */
+}
+
+.services-list div {
+    background-color: transparent;
+    padding: 40px;
+    font-size: 20px;
+    font-weight: 13px;
+    border-radius: 20px;
+    border-right: 10px;
+    transition: background 0.5s, transform 0.5s;
+    box-shadow: 1px 1px 20px #4c64b5f7, 1px 1px 40px #2d4e77f7;
+    text-align: center; /* Center the text */
+}
+
+.services-list div:hover {
+    background: rgb(116, 180, 185);
+    transform: translateY(-10px);
+}
+
+.services-list div i {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.services-list div a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+
+.project {
+    padding: 0 2rem; /* Add left and right padding of 2rem */
+    padding-bottom: 10rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.project h2 {
+    font-size: 3.75rem; /* Adjust font size for heading */
+}
+
+.project h2 span {
+    color: #0ef;
+}
+
+.project .project-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.project-container .project-box {
+    position: relative;
+    display: flex;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
+    overflow: hidden;
+}
+
+.project-box img {
+    width: 100%;
+    transition: .5s ease;
+}
+
+.project-box .project-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, .1), rgb(54, 139, 150));
+    color: #fdfdfd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 2rem; /* Add left and right padding of 2rem */
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.project-box:hover .project-layer {
+    opacity: 1;
+}
+
+.project-layer h4 {
+    font-size: 3rem;
+}
+
+.project-layer p {
+    font-size: 1.6rem;
+    margin: .3rem 0 1rem;
+}
+
+.project-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: white;
+    border-radius: 50%;
+}
+
+.project-layer a i {
+    font-size: 2rem;
+}
+
+
+
+
+.contact h2 {
+    font-size: 3.75rem; /* Decreased font size */
+    text-align: center;
+    margin-bottom: 30px; /* Added margin bottom */
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.contact h2 span {
+    color: #0ef;
+}
+
+.contact form {
+    max-width: 40rem; /* Decreased max-width */
+    margin: 0 auto; /* Center the form */
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .contact-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact form .contact-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1rem; /* Decreased padding */
+    font-size: 1.2rem; /* Decreased font size */
+    color: #1f9ab3;
+    background: url('img/background.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: .5rem; /* Decreased border radius */
+    margin: .5rem 0; /* Decreased margin */
+    box-shadow: 0 .1rem .3rem rgb(22, 209, 219); /* Decreased box shadow */
+}
+
+.contact form .contact-box input {
+    width: 48%; /* Decreased width */
+}
+
+.contact form .btn {
+    display: inline-block;
+    padding: 15px 30px; /* Decreased padding */
+    background: #0ef;
+    border-radius: 20px; /* Decreased border radius */
+    font-size: 14px; /* Decreased font size */
+    color: black;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 1; /* Changed opacity value */
+}
+
+.btn:hover {
+    box-shadow: 0 0 5px cyan, 0 0 2px cyan, 0 0 5px cyan, 0 0 10px cyan, 0 0 20px cyan;
+}
+
+ .footer{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 7%;
+    background:rgb(54, 139, 150) ;
+ }
+ 
+ .footer-foot p{
+    font-size: 1.6rem;
+    color: white;
+ }
+ .footer-iconTop a{
+    display: inline-flex;
+    /* justify-content: center;
+    align-items: center; */
+    margin-left:500px ;
+    padding: .8rem;
+    border-radius: .8rem;
+    border: .2rem solid rgb(55, 109, 166);
+    outline: .2rem solid transparent;
+    transition: .5s ease;
+ }
+ .footer-iconTop a:hover{
+    outline-color:rgb(14, 185, 247);
+ 
+ }
+ .footer-iconTop a i{
+    font-size: 2.4rem;
+    color: #333;
+ }
+ 
+ /* This is for h3 and paragraph 1st page also all h1 heading*/
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+/* This is for name h1*/
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+/* This is for icon*/
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@media(max-width:1100px){
+    .footer-iconTop{
+        display: none;
+    }
+}
+@media(max-width:1200px){
+    .footer-iconTop{
+        display: none;
+    }
+}
+/* Show the hamburger menu icon only on smaller screens */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    .navbar {
+        display: none; /* Hide the navbar by default on smaller screens */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 20px 0;
+    }
+    
+    .navbar.show {
+        display: flex; /* Show the navbar when it has the 'show' class */
+    }
+    
+    .navbar a {
+        margin: 10px 0; /* Adjust margin for each link */
+    }
+    .about{
+        display: grid;
+    }
+
+    .about .heading{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .about p{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding-top: 20px;
+        padding: 0 10px;
+    }
+    .project .project-container{
+       grid-template-columns: repeat(1,1fr);
+
+    }
+    .about-img img {
+        width: 80vw; 
+        height: auto; 
+    }
+    .about-text h2{
+        padding-top: 20px;
+        padding-bottom: 50px;
+    }
+    .services-list div {
+        font-size: 14px; /* Reduce font size for smaller screens */
+    }
+    .footer-iconTop{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .about-img img {
+        width: 90vw;
+    }
+    .footer-iconTop{
+        display: none;
+    }
+}
+
+.about .about-img {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+}
+
+.services-list div {
+    padding: 15px; 
+    font-size: 14px; 
+}
